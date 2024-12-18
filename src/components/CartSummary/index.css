@@ -1,0 +1,28 @@
+.cart-summary-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.order-total-label {
+  color: #616e7c;
+  font-size: 14px;
+  font-family: 'Roboto';
+}
+
+.order-total-value {
+  color: #171f46;
+  font-family: 'Roboto';
+}
+
+.total-items {
+  color: #616e7c;
+  font-family: 'Roboto';
+  padding-right: 60px;
+}
+
+.checkout-button {
+  width: 200px;
+  height: 30px;
+  margin-right: 50px;
+}
