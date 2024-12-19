@@ -15,6 +15,16 @@ import './App.css'
 class App extends Component {
   state = {
     cartList: [],
+    paymentMethod: '',
+    paymentSuccess: false,
+  }
+
+  changePayment = method => {
+    this.setState({paymentMethod: method})
+  }
+
+  submitPayment = () => {
+    this.setState({paymentSuccess: true})
   }
 
   removeAllCartItems = () => {
@@ -83,12 +93,16 @@ class App extends Component {
   }
 
   render() {
-    const {cartList} = this.state
+    const {cartList, paymentMethod, paymentSuccess} = this.state
 
     return (
       <CartContext.Provider
         value={{
           cartList,
+          paymentMethod,
+          paymentSuccess,
+          submitPayment: this.submitPayment,
+          changePayment: this.changePayment,
           addCartItem: this.addCartItem,
           removeCartItem: this.removeCartItem,
           incrementCartItemQuantity: this.incrementCartItemQuantity,
