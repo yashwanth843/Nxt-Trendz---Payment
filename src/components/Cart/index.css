@@ -79,9 +79,9 @@
   align-items: flex-end;
 }
 
-.remove-all-btn{
+.remove-all-btn {
   color: #0b69ff;
   border: none;
   background-color: transparent;
-  font-family: "Roboto";
+  font-family: 'Roboto';
 }
